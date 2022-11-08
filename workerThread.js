@@ -1,7 +1,7 @@
 const express = require("express");
 const crypto = require("crypto");
 const app = express();
-const Worker = require("webworker-threads").Worker;
+const Worker = require("worker_threads");
 
 app.get("/", (req, res) => {
   const worker = new Worker(function () {
